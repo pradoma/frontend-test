@@ -1,0 +1,660 @@
+/* Folha de estilo  - Primeiro desafio / frontend-test */
+
+/* Definindo estilos gerais */
+
+*  {
+	 font-family: "Open-sans", sans-serif;
+	 font-weight: normal;
+	 font-size: 16px;
+	 color: #898989;
+	 list-style: none;
+	 text-decoration: none;
+}
+
+body {
+	 margin: 0;
+	 padding: 0;
+}
+
+/* Grid CSS - Redefinindo / Limpando / Definindo */
+
+.row,
+.column {
+	 box-sizing: border-box;
+}
+
+.row:before,
+.row:after {
+	 content: " ";
+	 display: table;
+}
+ 
+.row:after {
+	 clear: both;
+}
+
+.column {
+	 position: relative;
+	 float: left;
+}
+
+.column + .column {
+	 margin-left: 1.6%;
+}
+
+/* Definindo as larguras das colunas */
+
+.column-1 {
+	 width: 6.86666666667%;
+}
+ 
+.column-2 {
+	 width: 15.3333333333%;
+}
+ 
+.column-3 {
+	 width: 23.8%;
+}
+ 
+.column-4 {
+	 width: 32.2666666667%;
+}
+ 
+.column-5 {
+	 width: 40.7333333333%;
+}
+ 
+.column-6 {
+	 width: 49.2%;
+}
+ 
+.column-7 {
+	 width: 57.6666666667%;
+}
+ 
+.column-8 {
+	 width: 66.1333333333%;
+}
+ 
+.column-9 {
+	 width: 74.6%;
+}
+ 
+.column-10 {
+	 width: 83.0666666667%;
+}
+ 
+.column-11 {
+	 width: 91.5333333333%;
+}
+ 
+.column-12 {
+	 width: 100%;
+}
+
+
+/* Container que envolve toda a página */
+
+#container {
+	 max-width: 100%;
+	 height: auto;
+}
+
+.fundoMenu {
+	 max-width: 100%;
+	 height: 50px;
+	 background: #eeeeee;
+	 border-bottom: 1px solid #c9c9c9;
+}
+
+header {
+	 width: 940px;
+	 margin: 0 auto;
+}
+
+/* Header com logo, menu, botão e breadcrumb */
+
+
+.fundoLogo {
+	 width: 118px;
+	 background: #fff;
+	 box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+	 width: 72px;
+	 background: #fff;
+	 margin-left: 23px;
+	 margin-top: 10px;
+}
+
+ul.menuPrincipal,
+ul.menuInsti {
+	 margin: 0;
+	 padding: 0;
+	 margin-top: 10px;
+	 margin-bottom: 10px;
+	 
+}
+
+.menuPrincipal li,
+.menuInsti li {
+	 display: inline;
+	 line-height: 29px;
+}
+
+.menuPrincipal li a {
+	 font-weight: 500;
+	 padding: 8px 25px 8px 20px;
+    border-right: 1px solid #c9c9c9;
+}
+
+.menuPrincipal li:nth-child(3) a {
+	 border-right: none;
+}
+
+.menuPrincipal li:nth-child(1) a {
+	 padding-left: 0;
+}
+
+.espaco1 {
+	 height: 16px;
+}
+
+a.botao {
+	 font-weight: 500;
+	 letter-spacing: 1px;
+	 color: #fff;
+	 line-height: 49px;
+	 background: #f7941e;
+	 margin: 0;
+	 margin-top: 10px;
+	 padding: 6px 42px 6px 31px;
+	 border-radius: 4px;
+}
+
+svg {
+	 position: absolute;
+	 top: 12px;
+}
+
+svg path {
+	 -webkit-fill: #fff;
+	 -moz-fill: #fff;
+	 -ms-fill: #fff;
+	 fill: #fff;
+}
+
+ol.breadcrumb {
+	 margin: 0;
+	 padding: 0;
+	 margin-top: 16px;
+	 margin-bottom: 22px;
+	 margin-left: -15px;
+}
+
+.breadcrumb li {
+    display: inline;
+	 padding-right: 14px;
+}
+
+.breadcrumb li a {
+	 font-size: 12px;
+	 font-weight: 100;
+}
+
+ol.breadcrumb svg {
+	 position: absolute;
+	 top: 16px;
+}
+
+ol.breadcrumb svg path {
+	 -webkit-fill: #898989;
+	 -moz-fill: #898989;
+	 -ms-fill: #898989;
+	 fill: #898989;
+}
+
+/* Slider e banner lateral superior */
+
+article {
+	 width: 940px;
+	 margin: 0 auto;
+}
+
+.slider,
+.natureza {
+	margin-top: 40px;
+}
+
+.slider img {
+	border: 1px solid #c9c9c9;
+}
+
+.slider ul {
+	padding: 0;
+	margin-top: 0;
+	margin-left: 321px;
+	display: inline-flex;
+	width: 50px;
+}
+
+.slider ul li {
+	padding: 0 5px;
+}
+
+.slider li i {
+	font-size: 12px;
+	color: #898989;
+}
+
+.slider li:last-child a i {
+	color: #20b7ce;
+}
+
+.natureza img {
+	border: 2px solid #ec007a;
+	height: 245px;
+	margin-left: 5px;
+}
+
+/* Conteúdo - Submenu lateral esquerdo */
+
+nav {
+	width: 940px;
+	margin: 0 auto;
+}
+
+nav .submenu {
+	border: 1px solid #c9c9c9;
+	padding-left: 15px;
+}
+
+.submenu h2 {
+	margin: 16px 15px 0 0;
+	padding-bottom: 10px;
+	font-weight: normal;
+	color: #f7941e;
+	border-bottom: 1px solid #c9c9c9;
+}
+
+ul.vestibulum {
+	padding: 0;
+	margin: 20px 0 20px 0;
+}
+
+.vestibulum li {
+	padding-top: 10px;
+}
+
+.vestibulum li:first-child {
+	font-weight: bold;
+	color: #20b7ce;
+	padding-top: 0;
+}
+
+.vestibulum li:first-child i {
+	font-size: 14px;
+	color: #f7941e;
+	padding-right: 8px;
+}
+
+.vestibulum li,
+.vestibulum li a {
+	font-size: 14px;
+	font-weight: 100;
+}
+
+p,
+.submenu p a {
+	font-weight: bold;
+	font-size: 14px;
+	color: #20b7ce;
+}
+
+p i {
+	font-size: 14px;
+	color: #f7941e;
+	padding-right: 8px;
+}
+
+/* Conteúdo central / Banner gato / Banner pães / Caixas sucesso,erro e editar */
+
+article .conteudo {
+	margin-left: 15px;
+}
+
+.conteudo h1,
+.gato h1 {
+	font-size: 20px;
+	font-weight: 100;
+	color: #ec007a;
+	margin-bottom: 20px;
+	margin-top: 5px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #c9c9c9;
+}
+
+.conteudo p {
+	font-weight: 200;
+	font-size: 16px;
+	color: #898989;
+	line-height: 19px;
+}
+
+.conteudo p:last-child {
+	padding-top: 10px;
+}
+
+.gato img {
+	border-radius: 10px;
+	margin-left: 3px;
+}
+
+.pao {
+	position: relative;
+}
+
+.pao p {
+	position: absolute;
+	bottom: 4px;
+	margin: 0;
+	font-weight: 400;
+	font-size: 16px;
+	color: #fff;
+	letter-spacing: 0.8px;
+	padding: 15px 113px 15px 113px;
+	background: rgba(0, 0, 0, 0.7);	
+}
+
+.caixa {
+	margin-top: 40px;
+	position: relative;
+	margin-left: 15px;
+}
+
+.caixaTexto p {
+	margin: 0;
+	font-weight: 200;
+	font-size: 16px;
+	color: #898989;
+	text-align: center;
+	padding-top: 91px;
+	border: 1px solid #f7941e;
+	padding-bottom: 29px;
+}
+
+.caixa svg {
+	width: 98px;
+	height: 54px;
+	position: absolute;
+	top: 38%;
+	left: 50%;
+	margin-top: -50px;
+	margin-left: -50px;
+	padding-top: 8px;
+}
+
+.caixa svg path {
+	-webkit-fill: #ec007a;
+	-moz-fill: #ec007a;
+	-ms-fill: #ec007a;
+	fill: #ec007a;
+}
+
+.tresCaixas .caixa:nth-child(2) .caixaTexto p {
+	padding-bottom: 12px;
+}
+
+.tresCaixas .caixa:nth-child(3) .caixaTexto p {
+	padding-bottom: 12px;
+}
+
+.tresCaixas .caixa:nth-child(3) svg {
+	width: 98px;
+	height: 30px;
+	position: absolute;
+	top: 39%;
+	left: 50%;
+	margin-top: -50px;
+	margin-left: -50px;
+	padding-top: 18px;
+}
+
+.tresCaixas .caixa:nth-child(3) .circulo {
+	position: absolute;
+	top: 15px;
+	left: 82px;
+	width: 52px;
+	height: 52px;
+	background: #fff;
+	border-radius: 50%;
+	border: 3px solid #ec007a; 
+}
+
+/* Rodapé menus da esquerda */
+
+.fundoRodape {
+	max-width: 100%;
+	height: auto;
+	margin-top: 80px;
+	background: #eeeeee;
+	position: relative;
+}
+
+footer {
+	width: 940px;
+	height: auto;
+	margin: 0 auto;
+}
+
+.menu h1,
+.logo1 h1 {
+	margin: 0;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	font-size: 20px;
+	font-weight: lighter;
+}
+
+ul.esquerda1,
+ul.direita {
+	padding: 0;
+	margin: 0;
+	margin: 20px 0;
+}
+
+.esquerda1 li,
+.direita li{
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+}
+
+.esquerda1 li:first-child,
+.direita li:first-child {
+	padding-bottom: 20px;
+}
+
+.menu p a {
+	font-size: 13px;
+	font-weight: bold;
+	text-decoration: underline;
+	text-decoration-color: #898989;
+}
+
+.esquerda1 li a,
+.esquerda2 li a,
+.direita li a {
+	font-size: 13px;
+	font-weight: 200;
+	line-height: 24.6px;
+	letter-spacing: 0.5px;
+}
+
+ul.esquerda2 {
+	padding: 0;
+	margin: 0;
+	margin-top: 119px;
+}
+
+.menu p svg {
+	 position: absolute;
+	 top: 260px;
+}
+
+.menu p svg path {
+	 -webkit-fill: #898989;
+	 -moz-fill: #898989;
+	 -ms-fill: #898989;
+	 fill: #898989;
+}
+
+ul.direita {
+	margin-top: 82px;
+}
+
+.menu p.link2 {
+	padding-top: 24px;
+}
+
+
+/* Rodapé menus dos logos direita */
+
+.espaco2 {
+	height: 50px;
+}
+
+.logo1 ul {
+	margin: 0;
+	padding: 0;
+	margin-top: 10px;
+}
+
+.logo1 ul li,
+.logo2 ul li {
+	padding-bottom: 20px;
+}
+
+.logo1 li:first-child img {
+	margin-left: 23px;
+}
+
+.logo1 li:nth-child(2) img {
+	margin-left: 30px;
+}
+
+.logo1 li:last-child img {
+	margin-left: 23px;
+}
+
+.logo2 ul {
+	margin: 0;
+	padding: 0;
+	margin-top: 88px;
+}
+
+.logo2 ul li:nth-child(2) img {
+	padding-bottom: 9px;
+	margin-left: 22px;
+}
+
+.logo2 ul li:nth-child(1) img {
+	margin-left: 25px;
+	padding-bottom: 5px;
+}
+
+.logo2 ul li:nth-child(3) img {
+	margin-left: 18px;
+}
+
+.logo2 ul li:last-child {
+	padding-bottom: 30px;
+}
+
+/* Rodapé menu institucional */
+
+.separador {
+	height: 1px;
+	border-bottom: 1px solid #c9c9c9;
+	margin-bottom: 30px;
+}
+
+.column + .column-12 {
+	margin-left: 0;
+}
+
+.institu {
+	margin-left: 0;
+}
+
+ul.menuInsti {
+	display: inline-block;
+	float: left;
+	margin-top: 0;
+	margin-bottom: 26px;
+}
+
+ul.menuInsti:last-child {
+	float: right;
+}
+
+.menuInsti li:nth-child(3) a {
+	padding-right: 0;
+}
+
+.menuInsti li:last-child a {
+	border-right: none;
+}
+
+.menuInsti li:first-child a {
+	padding-left: 0;
+}
+
+.menuInsti li a {
+	font-weight: 400;
+	font-size: 13px;
+	padding: 3px 10px 3px 10px;
+	border-right: 1px solid #c9c9c9;
+}
+
+/* Rodapé Copyright */
+
+.espaco3 {
+	height: 5px;
+}
+
+.fundoCopyright {
+	max-width: 100%;
+	background: #c9c9c9;
+}
+
+.fundoCopyright p {
+	font-weight: 400;
+	font-size: 13px;
+	text-align: center;
+	color: #898989;
+	margin: 0;
+	padding: 0;
+	padding-top: 30px;
+	padding-bottom: 80px;
+}
+
+
+
+/* Media Queries 
+
+@media screen and (max-width: 768px) {
+	#container {
+		width: 100%;
+	}
+	header,
+	article,
+	nav,
+	footer {
+		width: 768px;
+		overflow:hidden;
+	}
+} */
+
+
