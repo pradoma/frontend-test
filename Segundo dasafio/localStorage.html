@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>SegundoTest</title>
+		<link rel="stylesheet" href="localStorage.css">
+		
+		<script type="text/javascript">
+		/* Máscara nome */	
+			function mascara(o,f){
+				v_obj=o
+				v_fun=f
+				setTimeout("execmascara()",1)
+			}
+			function execmascara(){
+				v_obj.value=v_fun(v_obj.value)
+			}
+			function soLetras(v){
+				return v.replace(/\d/g,"") //Remove tudo o que não é Letra
+			}
+			function soLetrasMA(v){
+				v=v.toUpperCase() //Maiúsculas
+				return v.replace(/\d/g,"") //Remove tudo o que não é Letra ->maiusculas
+			}
+			function soLetrasMI(v){
+				v=v.toLowerCase() //Minusculas
+				return v.replace(/\d/g,"") //Remove tudo o que não é Letra ->minusculas
+			}
+			function soNumeros(v){
+				return v.replace(/\D/g,"") //Remove tudo o que não é dígito
+			}
+		</script>
+		
+		<script type="text/javascript">
+		/* Máscara telefone */
+			function mascara(o,f){
+				v_obj=o
+				v_fun=f
+				setTimeout("execmascara()",1)
+				}
+			function execmascara(){
+				v_obj.value=v_fun(v_obj.value)
+			}
+			function mtel(v){
+				v=v.replace(/\D/g,""); //Remove tudo o que não é dígito
+				v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+				v=v.replace(/(\d)(\d{4})$/,"$1-$2"); //Coloca hífen entre o quarto e o quinto dígitos
+				return v;
+			}
+			function id( el ){
+				return document.getElementById( el );
+			}
+			window.onload = function(){
+			id('telefone').onkeypress = function(){
+				mascara( this, mtel );
+				}
+			}
+		</script>
+		
+		<script type="text/javascript">
+		/* Máscara email */
+			function validacaoEmail(field) {
+				var email = f1.email.value;
+				usuario = field.value.substring(0, field.value.indexOf("@"));
+				dominio = field.value.substring(field.value.indexOf("@")+ 1, field.value.length);
+
+				if ((usuario.length >=1) &&
+					 (dominio.length >=3) && 
+					 (usuario.search("@")==-1) && 
+					 (dominio.search("@")==-1) &&
+					 (usuario.search(" ")==-1) && 
+					 (dominio.search(" ")==-1) &&
+					 (dominio.search(".")!=-1) &&      
+					 (dominio.indexOf(".") >=1)&& 
+					 (dominio.lastIndexOf(".") < dominio.length - 1)) {
+						document.getElementById("email").innerHTML="E-mail válido";
+						alert("E-mail valido");
+						}
+				else{
+					document.getElementById("email").innerHTML="<font color='red'>E-mail inválido </font>";
+					f1.email.value = [];
+					return false;
+					alert("E-mail invalido");
+					}
+			}
+		</script>
+		
+		<script src="localStorage.js" type="text/javascript"></script>
+		
+	</head>
+	
+	<body>
+		
+		<h1>Lista de Cadastro</h1>
+		<div id="tasks-output"></div>
+			<form id="form-task" name="f1">
+				<label>Nome: <input type="text" onkeypress="mascara(this,soLetras)" name="descricao" placeholder="Nome" value="" required/></label>
+				<label>Telefone: <input type="text" name="telefone" id="telefone" maxlength="15" required/></label>
+		  		<label>Email: <input name="email" type="text" id="email" onblur="validacaoEmail(f1.email)" maxlength="30" size='35' required/></label>
+				<input type="submit" value="Salvar">
+				<input type="reset" name="botao_limpar" value="Cancelar"/> 
+			</form>
+		
+	</body>
+	
+</html>
